@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Assistentes · Alexandre Araújo Costa</title>
+<meta name="description" content="Assistentes conversacionais de apoio ao ensino e à pesquisa em Direito, desenvolvidos na Faculdade de Direito da UnB.">
+<style>
+  :root {
+    --papel: #f3f1ec;
+    --tinta: #14202b;
+    --tinta-suave: #46586a;
+    --tinta-fraca: #7c868f;
+    --azul: #003366;
+    --azul-suave: #2c5580;
+    --verde: #006633;
+    --verde-suave: #2f8a5c;
+    --linha: #d8d4c8;
+    --cartao: #ffffff;
+    --serif: Constantia, "Iowan Old Style", Georgia, "Palatino Linotype", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --papel: #12181c; --tinta: #e6eaec; --tinta-suave: #9aa8b2; --tinta-fraca: #6b767d;
+      --azul: #7fb2de; --azul-suave: #5f92bd; --verde: #4fd18f; --verde-suave: #379968;
+      --linha: #2b353c; --cartao: #182026;
+    }
+  }
+  :root[data-theme="dark"] {
+    --papel: #12181c; --tinta: #e6eaec; --tinta-suave: #9aa8b2; --tinta-fraca: #6b767d;
+    --azul: #7fb2de; --azul-suave: #5f92bd; --verde: #4fd18f; --verde-suave: #379968;
+    --linha: #2b353c; --cartao: #182026;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 20px 72px;
+    background: var(--papel);
+    color: var(--tinta);
+    font-family: var(--sans);
+    line-height: 1.6;
+  }
+  .pagina { max-width: 720px; margin: 0 auto; }
+
+  .eyebrow {
+    display: block;
+    margin-top: 48px;
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--verde);
+    font-weight: 600;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+    color: var(--tinta);
+    margin: 0.2em 0 0.3em;
+    text-wrap: balance;
+  }
+  .lede {
+    font-size: 1.06rem;
+    color: var(--tinta-suave);
+    max-width: 60ch;
+    margin: 0 0 14px;
+  }
+  .nota {
+    border-left: 3px solid var(--azul-suave);
+    padding: 2px 0 2px 14px;
+    margin: 18px 0 0;
+    font-size: 0.92rem;
+    color: var(--tinta-suave);
+    max-width: 60ch;
+  }
+  .nota strong { color: var(--tinta); }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.22rem;
+    font-weight: 700;
+    color: var(--azul);
+    margin: 44px 0 4px;
+    padding-top: 18px;
+    border-top: 1px solid var(--linha);
+  }
+  h2 + p {
+    margin: 0 0 18px;
+    color: var(--tinta-suave);
+    font-size: 0.95rem;
+    max-width: 60ch;
+  }
+
+  .lista { display: flex; flex-direction: column; gap: 12px; }
+  a.item {
+    display: block;
+    background: var(--cartao);
+    border: 1px solid var(--linha);
+    border-radius: 10px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .12s;
+  }
+  a.item:hover, a.item:focus-visible { border-color: var(--verde-suave); }
+  a.item .nome {
+    font-family: var(--serif);
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: var(--azul);
+    display: block;
+    margin-bottom: 3px;
+  }
+  a.item .resumo {
+    font-size: 0.94rem;
+    color: var(--tinta-suave);
+    display: block;
+  }
+  a.item .ordem {
+    font-family: ui-monospace, Consolas, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--tinta-fraca);
+    display: block;
+    margin-top: 6px;
+  }
+
+  footer {
+    margin-top: 52px;
+    padding-top: 20px;
+    border-top: 1px solid var(--linha);
+    font-size: 0.88rem;
+    color: var(--tinta-suave);
+  }
+  footer p { margin: 0 0 10px; max-width: 62ch; }
+  footer strong { color: var(--tinta); }
+  a { color: var(--verde); }
+  :focus-visible { outline: 2px solid var(--azul-suave); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<div class="pagina">
+
+  <span class="eyebrow">Universidade de Brasília · Faculdade de Direito</span>
+  <h1>Assistentes</h1>
+  <p class="lede">
+    Assistentes conversacionais de apoio ao ensino e à pesquisa em Direito.
+    Nenhum deles escreve no seu lugar: cada um conversa com você até o seu
+    próprio texto sustentar o que está tentando dizer.
+  </p>
+  <p class="lede">
+    Todos são prompts portáteis. Não é site nem aplicativo: é um texto que
+    você copia e cola em qualquer assistente de IA gratuito que já tenha, sem
+    instalar nada e sem custo.
+  </p>
+  <p class="nota">
+    <strong>Abordagem experimental, em fase de testes.</strong> Quem quiser
+    relatar um resultado, apontar um erro ou sugerir um ajuste pode usar
+    <a href="https://forms.gle/BHhKZSQiRq1JUgsE8">este formulário</a>. Só
+    testes mais amplos permitem medir a qualidade das respostas.
+  </p>
+
+  <h2>Para estudantes</h2>
+  <p>Cada um serve a uma atividade específica de disciplina, mas nenhum é exclusivo dela.</p>
+  <div class="lista">
+    <a class="item" href="miro/">
+      <span class="nome">Miro</span>
+      <span class="resumo">Planejamento da pesquisa: a lacuna no conhecimento, o problema formulado a partir dela, a metodologia e o referencial teórico, definidos por conversa até se equilibrarem entre si.</span>
+    </a>
+    <a class="item" href="ana/">
+      <span class="nome">Ana</span>
+      <span class="resumo">O voto de desempate no Caso dos Exploradores de Cavernas, de Lon Fuller. Põe na mesa a melhor razão contrária à sua e pede a sua resposta.</span>
+    </a>
+    <a class="item" href="quim/">
+      <span class="nome">Quim</span>
+      <span class="resumo">A reescrita contemporânea de Teoria do Medalhão, de Machado de Assis, até o texto ter alguma coisa que seja sua.</span>
+    </a>
+  </div>
+
+  <h2>Para quem prepara dissertação ou tese</h2>
+  <p>Feitos para rodar nesta ordem, embora cada um funcione sozinho.</p>
+  <div class="lista">
+    <a class="item" href="analisador/">
+      <span class="nome">Analisador de dissertações e teses</span>
+      <span class="resumo">Mede a forma do arquivo no seu próprio navegador, sem que ele saia da sua máquina, e lê o argumento por prompt. A metade da análise que se confere sem discutir.</span>
+      <span class="ordem">Primeiro</span>
+    </a>
+    <a class="item" href="pre-banca/">
+      <span class="nome">Pré-banca</span>
+      <span class="resumo">Cinco leituras independentes do mesmo trabalho, cada uma com uma pergunta própria, mais uma síntese. O que sai são as perguntas que você vai ouvir.</span>
+      <span class="ordem">Depois</span>
+    </a>
+    <a class="item" href="simulador-banca/">
+      <span class="nome">Simulador de banca</span>
+      <span class="resumo">Uma arguição com dois examinadores e o orientador presidindo. Não produz relatório: produz a experiência de ser interpelado, e a lista do que você não conseguiu responder.</span>
+      <span class="ordem">Antes de marcar a defesa</span>
+    </a>
+    <a class="item" href="corretor/">
+      <span class="nome">Corretor</span>
+      <span class="resumo">Executa os reparos que os outros apontaram, frase a frase, e recusa por escrito os que exigiriam medir ou coletar alguma coisa nova.</span>
+      <span class="ordem">Por último</span>
+    </a>
+  </div>
+
+  <footer>
+    <p><strong>Concepção, critérios e prompts:</strong> Prof. Alexandre Araújo
+    Costa, Universidade de Brasília. Desenvolvidos com apoio de modelos Claude,
+    da Anthropic, no Claude Code.</p>
+    <p>Foram feitos prioritariamente para os estudantes e orientandos do autor,
+    na graduação e na pós-graduação da Faculdade de Direito da UnB. A princípio
+    podem servir a outras abordagens, especialmente no direito e nas demais
+    ciências sociais, mas só testes mais amplos permitirão medir a qualidade das
+    respostas, nessas áreas e fora delas.</p>
+    <p>O código de todos está em
+    <a href="https://github.com/AlexandreAraujoCosta">github.com/AlexandreAraujoCosta</a>.</p>
+  </footer>
+
+</div>
+</body>
+</html>
